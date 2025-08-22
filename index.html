@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MayaCode - Café Soluble Premium de Guatemala</title>
+    <meta name="description" content="Descubre MayaCode, el café soluble premium que lleva la tradición cafetalera guatemalteca directamente a tu taza. Calidad excepcional para profesionales que no comprometen la excelencia.">
+    <meta name="keywords" content="café guatemalteco, café soluble premium, café instantáneo, Guatemala, MayaCode">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="min-h-screen bg-gradient">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                            <line x1="6" y1="1" x2="6" y2="4"/>
+                            <line x1="10" y1="1" x2="10" y2="4"/>
+                            <line x1="14" y1="1" x2="14" y2="4"/>
+                        </svg>
+                        <span class="logo-text">MayaCode</span>
+                    </div>
+                    <button id="cart-btn" class="cart-button">
+                        <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"/>
+                            <circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
+                        <span id="cart-count" class="cart-count hidden">0</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            El Auténtico Sabor de
+                            <span class="text-amber">Guatemala</span>
+                        </h1>
+                        <p class="hero-description">
+                            Descubre MayaCode, el café soluble premium que lleva la tradición cafetalera guatemalteca directamente a
+                            tu taza. Calidad excepcional para profesionales que no comprometen la excelencia.
+                        </p>
+                        <div class="hero-buttons">
+                            <button id="explore-btn" class="btn-primary">
+                                Explorar Productos
+                            </button>
+                            <button id="whatsapp-btn" class="btn-secondary">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                                </svg>
+                                Contactar por WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <!-- <img src="assets/cafe_bg.png" alt="MayaCode Café Premium" class="hero-img"> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Beneficios -->
+        <section class="benefits">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">¿Por Qué Elegir MayaCode?</h2>
+                    <p class="section-description">
+                        Más que un café, es una experiencia premium diseñada para el profesional moderno
+                    </p>
+                </div>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon amber">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"/>
+                                <polyline points="8.21,13.89 7,23 12,20 17,23 15.79,13.88"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Calidad Premium</h3>
+                        <p class="benefit-description">Granos seleccionados de las mejores fincas guatemaltecas</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon green">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12,6 12,12 16,14"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Preparación Rápida</h3>
+                        <p class="benefit-description">Listo en segundos, perfecto para tu rutina diaria</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+                                <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2.04 4.6 4.14 5.78s3.83 2.8 3.83 5.03A9.11 9.11 0 0 1 20.5 19"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">100% Natural</h3>
+                        <p class="benefit-description">Sin aditivos artificiales, solo café puro</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon purple">
+                            <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                                <line x1="6" y1="1" x2="6" y2="4"/>
+                                <line x1="10" y1="1" x2="10" y2="4"/>
+                                <line x1="14" y1="1" x2="14" y2="4"/>
+                            </svg>
+                        </div>
+                        <h3 class="benefit-title">Sabor Auténtico</h3>
+                        <p class="benefit-description">El verdadero sabor de Guatemala en cada sorbo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proceso -->
+        <section class="process">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestro Proceso de Calidad</h2>
+                    <p class="section-description">Desde la montaña hasta tu taza, cada paso garantiza la excelencia</p>
+                </div>
+
+                <div class="process-grid">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Selección de Granos</h3>
+                        <p class="step-description">
+                            Cuidadosa selección de los mejores granos arábica de las tierras altas de Guatemala
+                        </p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Tostado Artesanal</h3>
+                        <p class="step-description">Proceso de tostado controlado que resalta los sabores únicos y aromáticos</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Liofilización Premium</h3>
+                        <p class="step-description">Tecnología avanzada que preserva el sabor y aroma originales del café</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Como ejecutivo, necesito mi café rápido y de calidad. MayaCode es perfecto para mis mañanas ocupadas."
+                        </p>
+                        <div class="testimonial-author">Carlos Mendoza</div>
+                        <div class="testimonial-role">Director de Marketing</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "El sabor es increíble, realmente se nota la calidad guatemalteca. Lo recomiendo totalmente."
+                        </p>
+                        <div class="testimonial-author">Ana García</div>
+                        <div class="testimonial-role">Arquitecta</div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Perfecto para la oficina. Mis colegas siempre preguntan qué café uso. ¡Es MayaCode!"
+                        </p>
+                        <div class="testimonial-author">Roberto Silva</div>
+                        <div class="testimonial-role">Consultor IT</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Productos -->
+        <section id="productos" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nuestros Productos</h2>
+                    <p class="section-description">Elige la presentación perfecta para tu estilo de vida</p>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card" data-product="1">
+                        <div class="tag-nuevo">Nuevo</div>
+                        <div class="product-content">
+                            <img src="assets/gold.jpg" alt="MayaCode Premium 90g" class="product-image">
+                            <h3 class="product-name">MayaCode Premium 90g</h3>
+                            <p class="product-description">Perfecto para probar nuestro café premium. Ideal para 1-2 semanas de consumo diario.</p>
+
+                            <ul class="product-features">
+                                <li>90g de café soluble premium</li>
+                                <li>Aproximadamente 45 tazas</li>
+                                <li>Empaque hermético</li>
+                            </ul>
+
+                            <div class="product-footer">
+                                <div class="product-price">Q55</div>
+                                <button class="btn-primary product-details-btn" data-product="1">Ver Detalles</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-product="2">
+                        <div class="product-content">
+                            <img src="assets/gold-big.png" alt="MayaCode Premium 180g" class="product-image">
+                            <h3 class="product-name">MayaCode Premium 180g</h3>
+                            <p class="product-description">La opción más popular. Perfecto para familias o consumidores frecuentes.</p>
+
+                            <ul class="product-features">
+                                <li>180g de café soluble premium</li>
+                                <li>Aproximadamente 90 tazas</li>
+                                <li>Mejor relación precio-cantidad</li>
+                            </ul>
+
+                            <div class="product-footer">
+                                <div class="product-price">Q95</div>
+                                <button class="btn-primary product-details-btn" data-product="2">Ver Detalles</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Suscripción -->
+                <div class="subscription-section">
+                    <div class="subscription-content">
+                        <h3 class="subscription-title">Suscripción Mensual</h3>
+                        <p class="subscription-description">Recibe tu MayaCode automáticamente cada mes y ahorra hasta 15%</p>
+                        <div class="subscription-plans">
+                            <div class="plan-card">
+                                <h4 class="plan-name">Plan Básico</h4>
+                                <div class="plan-price">Q85/mes</div>
+                                <p class="plan-description">1 frasco de 180g mensual</p>
+                            </div>
+                            <div class="plan-card featured">
+                                <h4 class="plan-name">Plan Premium</h4>
+                                <div class="plan-price">Q150/mes</div>
+                                <p class="plan-description">2 frascos de 180g mensuales</p>
+                            </div>
+                        </div>
+                        <button id="subscribe-btn" class="btn-whatsapp">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                            </svg>
+                            Suscribirse por WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Preguntas Frecuentes</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Cómo se prepara MayaCode?</h3>
+                        <p class="faq-answer">
+                            Simplemente agrega una cucharadita de MayaCode a una taza de agua caliente (no hirviendo), revuelve y
+                            disfruta. Puedes ajustar la cantidad según tu preferencia de intensidad.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Cuánto tiempo dura el producto?</h3>
+                        <p class="faq-answer">
+                            Una vez abierto, MayaCode mantiene su frescura por hasta 12 meses si se almacena en un lugar fresco y
+                            seco. El frasco de 90g rinde aproximadamente 45 tazas, y el de 180g unas 90 tazas.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">¿Hacen envíos a toda Guatemala?</h3>
+                        <p class="faq-answer">
+                            Sí, realizamos envíos a todo el territorio nacional. Los envíos dentro de la Ciudad de Guatemala llegan
+                            en 24-48 horas, y al interior del país en 2-4 días hábiles.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3 class="faq-question">
+                            ¿Puedo cancelar mi suscripción en cualquier momento?
+                        </h3>
+                        <p class="faq-answer">
+                            Por supuesto. Puedes pausar o cancelar tu suscripción en cualquier momento sin penalizaciones. Solo
+                            contáctanos por WhatsApp y te ayudaremos inmediatamente.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="final-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">¿Listo Para Experimentar la Diferencia?</h2>
+                    <p class="cta-description">
+                        Únete a miles de profesionales que ya disfrutan del auténtico sabor guatemalteco
+                    </p>
+                    <div class="cta-buttons">
+                        <button id="buy-now-btn" class="btn-white">
+                            Comprar Ahora
+                        </button>
+                        <button id="phone-btn" class="btn-outline">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            +502 1234-5678
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-section">
+                        <div class="footer-logo">
+                            <svg class="coffee-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                                <line x1="6" y1="1" x2="6" y2="4"/>
+                                <line x1="10" y1="1" x2="10" y2="4"/>
+                                <line x1="14" y1="1" x2="14" y2="4"/>
+                            </svg>
+                            <span class="logo-text" style="color: white;">MayaCode</span>
+                        </div>
+                        <p class="footer-description">
+                            El auténtico sabor de Guatemala en cada taza. Calidad premium para profesionales exigentes.
+                        </p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3 class="footer-title">Contacto</h3>
+                        <div class="footer-contact">
+                            <p>WhatsApp: +502 1234-5678</p>
+                            <p>Email: info@mayacode.gt</p>
+                            <p>Guatemala, Guatemala</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-section">
+                        <h3 class="footer-title">Síguenos</h3>
+                        <div class="footer-social">
+                            <button class="social-link">Facebook</button>
+                            <button class="social-link">Instagram</button>
+                            <button class="social-link">LinkedIn</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 MayaCode - grupo 22. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-product-name" class="modal-title"></h2>
+                <button id="close-modal" class="close-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-product-image" src="/placeholder.svg" alt="" class="modal-img">
+                </div>
+
+                <div class="modal-details">
+                    <p id="modal-product-description" class="modal-description"></p>
+
+                    <div class="modal-features">
+                        <h3 class="features-title">Características:</h3>
+                        <ul id="modal-product-features" class="features-list"></ul>
+                    </div>
+
+                    <div class="modal-price-section">
+                        <div id="modal-product-price" class="modal-price"></div>
+                    </div>
+
+                    <button id="add-to-cart-btn" class="btn-primary full-width">
+                        Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Carrito de Compras</h2>
+                <button id="close-cart" class="close-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <div id="cart-items" class="cart-items"></div>
+                <div id="cart-empty" class="cart-empty hidden">
+                    <svg class="empty-cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/>
+                        <circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <p>Tu carrito está vacío</p>
+                </div>
+
+                <div id="cart-total" class="cart-total hidden">
+                    <div class="total-section">
+                        <div class="total-row">
+                            <span class="total-label">Total:</span>
+                            <span id="total-price" class="total-amount">Q0</span>
+                        </div>
+                        <button id="checkout-btn" class="btn-primary full-width">
+                            Proceder al Pago
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
