@@ -2,20 +2,28 @@
 const products = [
   {
     id: 1,
-    name: "MayaCode Premium 90g",
+    name: "MayaCode Premium 100g",
     price: 55,
     image: "assets/gold.jpg",
     description: "Perfecto para probar nuestro café premium. Ideal para 1-2 semanas de consumo diario.",
-    features: ["90g de café soluble premium", "Aproximadamente 45 tazas", "Empaque hermético"],
+    features: ["100g de café soluble premium", "Aproximadamente 50 tazas", "Empaque hermético"],
   },
   {
     id: 2,
-    name: "MayaCode Premium 180g",
+    name: "MayaCode Premium 250g",
     price: 95,
     image: "assets/gold-big.png",
     description: "La opción más popular. Perfecto para familias o consumidores frecuentes.",
-    features: ["180g de café soluble premium", "Aproximadamente 90 tazas", "Mejor relación precio-cantidad"],
+    features: ["250g de café soluble premium", "Aproximadamente 90 tazas", "Mejor relación precio-cantidad"],
   },
+  {
+    id: 3,
+    name: "MayaCode Premium 500g",
+    price: 150,
+    image: "assets/cafe-500.jpeg",
+    description: "Ideal para 2-4 semanas de consumo diario.",
+    features: ["500g de café soluble premium", "Aproximadamente 150 tazas", "La mejor opción para familias"],
+  }
 ]
 
 // Carrito
