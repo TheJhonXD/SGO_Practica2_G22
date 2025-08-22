@@ -29,7 +29,7 @@ body {
   background: url("assets/cafe_bg.png") center / cover no-repeat;
   /* background: linear-gradient(135deg, #fef7ed 0%, #fed7aa 100%); */
   background-attachment: fixed;
-  filter: brightness(0.2);
+  filter: brightness(0.3);
   z-index: -1;
   pointer-events: none;
 }
